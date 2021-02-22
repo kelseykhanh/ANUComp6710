@@ -69,6 +69,14 @@ complete the unimplemented method `findFurthest()`.
 Use the tests provided to test your solution, and then commit and push your
 changes to GitLab.
 
+### Q1.1E  [5 Marks]  Basic Imperative Programming
+
+Using the incomplete template for [Q1Remainder.java](src/comp1110/exam/Q1Remainder.java),
+complete the unimplemented method `findCloseDivisor()`.
+ 
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
 ### Q1.2A  [5 Marks]  Recursion (harder)
 
 Using the incomplete template for [Q1Magic.java](src/comp1110/exam/Q1Magic.java),
@@ -89,6 +97,14 @@ changes to GitLab.
 
 Using the incomplete template for [Q1TwoThree.java](src/comp1110/exam/Q1TwoThree.java),
 complete the unimplemented method `twothree()`.
+ 
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
+### Q1.2D  [5 Marks]  Recursion (harder)
+
+Using the incomplete template for [Q1VowCon.java](src/comp1110/exam/Q1VowCon.java),
+complete the unimplemented method `vowcon()`.
  
 Use the tests provided to test your solution, and then commit and push your
 changes to GitLab.
@@ -117,6 +133,14 @@ complete the unimplemented method `find()`.
 Use the tests provided to test your solution, and then commit and push your
 changes to GitLab.
 
+### Q1.3D  [5 Marks]  Search (harder)
+
+Using the incomplete template for [Q1Bishop.java](src/comp1110/exam/Q1Bishop.java),
+complete the unimplemented method `blackBishopMoves()`.
+ 
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
 ## Q2A  [5 Marks]  File I/O, Imperative Programming
 
 Using the incomplete template for [Q2Caps.java](src/comp1110/exam/Q2Caps.java),
@@ -133,9 +157,18 @@ complete the unimplemented method `checksum()`.
 Use the tests provided to test your solution, and then commit and push your
 changes to GitLab.
 
-## Q3  [25 Marks]
+## Q2C  [5 Marks]  File I/O, Imperative Programming
 
-### Q3.1 [20 Marks] Software Implementation
+Using the incomplete template for [Q2Redact.java](src/comp1110/exam/Q2Redact.java),
+complete the unimplemented method `redact()`.
+ 
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
+
+## Q3A  [25 Marks]
+
+### Q3.1A [20 Marks] Software Implementation
 
 Using the incomplete template for [Q3Hollywood.java](src/comp1110/exam/Q3Hollywood.java),
 complete *all unimplemented methods*.
@@ -148,7 +181,7 @@ any additional classes must be implemented as **nested classes** within the
 Use the tests provided to test your solution, and then commit and push your
 changes to GitLab.
 
- ### Q3.2  [5 Marks]  Software Testing
+ ### Q3.2A  [5 Marks]  Software Testing
  
 Using the incomplete template for [Q3GetMaxCoStarsTest.java](src/comp1110/exam/Q3GetMaxCoStarsTest.java),
 write one or more unit tests for the `getMaxCoStars()` method. You must complete
@@ -167,9 +200,56 @@ additional mark for each incorrect implementation that you fail.
  
 Once you have completed your tests, commit and push your changes to GitLab.
 
-## Q4  [20 Marks]  Data Structures
+## Q3B  [25 Marks]
+
+### Q3.1B [20 Marks] Software Implementation
+
+Using the incomplete template for [Q3Library.java](src/comp1110/exam/Q3Library.java),
+complete *all unimplemented methods*.
+ 
+You must complete your solution as **a single file, [Q3Library.java](src/comp1110/exam/Q3Library.java)**.
+You are encouraged to create additional classes as required to solve the problem;
+any additional classes must be implemented as **nested classes** within the
+`Q3Library` class.
+ 
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
+ ### Q3.2B  [5 Marks]  Software Testing
+ 
+Using the incomplete template for [Q3GetMaxCoauthorsTest.java](src/comp1110/exam/Q3GetMaxCoauthorsTest.java),
+write one or more unit tests for the `getMaxCoauthors()` method. You must complete
+your solution as a single file, `Q3GetMaxCoauthorsTest.java`. When writing the
+tests, you may assume that the provided methods in the `Q3Library` class are
+correctly implemented.
+ 
+The specification of the `getMaxCoauthors()` method is provided in the Javadoc
+comment immediately above the method. This question is auto-graded; your tests
+will be run against multiple implementations of the `getMaxCoauthors()` method,
+one of which is correct and some incorrect. Your test must be able to pass
+the correct implementation.   If you cannot pass the correct implementation
+you will get zero (regardless of how many incorrect implementations you fail.
+If you pass the correct implementation, you will get one mark, and then one
+additional mark for each incorrect implementation that you fail.
+ 
+Once you have completed your tests, commit and push your changes to GitLab.
+
+## Q4A  [20 Marks]  Data Structures
 
 Using the incomplete template for [Q4FerrisWheel.java](src/comp1110/exam/Q4FerrisWheel.java),
+complete each of the unimplemented methods. 
+
+Your solution must implement the data structure from first principles (as was
+done in lectures), avoiding use of Java's collection classes such as
+`java.util.List`.  *Solutions that ignore this requirement will be penalized
+accordingly.*
+
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
+
+## Q4B  [20 Marks]  Data Structures
+
+Using the incomplete template for [Q4SushiTrain.java](src/comp1110/exam/Q4SushiTrain.java),
 complete each of the unimplemented methods. 
 
 Your solution must implement the data structure from first principles (as was
@@ -198,6 +278,15 @@ possible. In implementing your hash code, you may *not* use the default Java
 implementations in `Object.hashCode()` or `Objects.hashCode()`.
 
 Use the tests provided to test your solution, and then commit and push your changes to GitLab.
+
+## Q5C  [5 Marks]  Hashing and Equality
+
+Using the incomplete template for [Q5Actor.java](src/comp1110/exam/Q5Actor.java),
+complete the unimplemented methods `hash()` and `equals()`.  You must implement
+`hash()` **without using Java's built-in `hashCode()` method**.
+
+Use the tests provided to test your solution, and then commit and push your
+changes to GitLab.
 
 ## Q6 [20 Marks]  Multiple Choice
 
@@ -232,7 +321,7 @@ questions you should **commit** your `q-6.csv` file and **push** it to the
 server.   You should check the CI for any error messages relating to `Q6` and
 fix them if they exist.  
 
-### Q6.1  [5 Marks]  Threads
+### Q6.1A  [5 Marks]  Threads
 
 Given the following Java class:
 
@@ -267,6 +356,43 @@ after both threads have run to completion?
  d) `x` = 0, `y` = 2
  
  e) `x` = 0, `y` = 0
+ 
+ ### Q6.1B  [5 Marks]  Threads
+ 
+ Given the following Java class:
+ 
+ ````
+ public class ThreadTest implements Runnable {
+   private int x=0;
+   private int y=0;
+   
+   public static void main(String [] args) {
+     ThreadTest obj = new ThreadTest();
+     (new Thread(obj)).start();
+     (new Thread(obj)).start();
+   }
+ 
+   public void run() {
+     for (int i=0; i<10; i++) {
+       x++;
+       y++;
+       System.out.println("x = " +x+"; y = "+y);
+     }
+   }
+ }
+ ````
+ 
+ What is the output of `ThreadTest` when run?
+   
+  a) It prints twenty pairs of consecutive numbers, in each case x and y are the same.
+  
+  b) It prints ten pairs of consecutive numbers, in each case x and y are the same.
+  
+  c) It prints pairs of numbers, in each case x and y are the same, but the numbers may not be always be in the correct order.
+  
+  d) It prints pairs of numbers, but the numbers may not be always be in the correct order, and sometimes x and y may differ.
+  
+  e) It will not compile due to syntax errors in the `main()` method.
  
 ### Q6.2A  [5 Marks]  JavaFX
 
@@ -327,6 +453,38 @@ d) 9
 
 e) 10
 
+### Q6.2C  [5 Marks]  JavaFX
+
+This question relates to the following small JavaFX program:
+
+````
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage.setTitle("Hello");
+        Group root = new Group();
+        Scene scene = new Scene(root, 300, 300);
+        stage.setScene(scene);
+
+        Text hi = new Text("Hello World!");
+        hi.setFont(Font.font("Tahoma", FontWeight.NORMAL, 40));
+        hi.setFill(Color.RED);
+        hi.setOpacity(1.0);
+        stage.setOpacity(.25);
+        
+        root.getChildren().add(hi);
+        stage.show();
+    }
+````
+
+Select the option below which best describes the behavior of the program above:
+
+a) It shows a window titled "Hello" containing red text that says "Hello World!"
+
+b) It shows a faint window titled "Stage" containing red text that says "Hello World!"
+
+c) It shows a transparent window titled "Hello" containing a faint white square.
+
+d) It does nothing.
 
 ### Q6.3A  [5 Marks]  Complexity
 
@@ -391,6 +549,33 @@ c) The time complexity of `silly()` with `in` of size n is *O(2 n)*.
 
 d) The time complexity of `silly()` with `in` of size n is *O(n^2)*.
 
+### Q6.3C  [5 Marks]  Complexity
+
+Consider the method `foo()` below.
+````
+    public void foo(int[] l) {
+        int n = l.length;
+        for (int i = 0; i < n/3; i++) {
+            l[i] *= 2;
+            for (int j = 0; j < n/2; j++) {
+                l[i] -= 1;
+                for(int k = 0; k < n-1; k++) {
+                    l[k] = (l[k] + l[j] + l[i]) %n;
+                }
+            }
+        }
+    }
+````
+
+Which of the following statements is correct?
+
+a) The time complexity of `foo()` is *O(3n)*.
+
+b) The time complexity of `foo()` is *O(n log n)*.
+
+c) The time complexity of `foo()` is *O(2 n)*.
+
+d) The time complexity of `foo()` is *O(n^3)*.
 
 ### Q6.4A  [5 Marks]  Grammars
 
@@ -491,6 +676,57 @@ seq = { 'alph' };
 pal = seq, seq;
 ````
 
+### Q6.4C  [5 Marks]  Grammars
+
+This question relates to sentences (statements) in a language defined by a simple EBNF grammar.
+For reference, some symbols of EBNF are as follows:
+
+````
+= defines a production rule
+, concatenation
+| alternation / choice
+[...] optional - zero or one
+{...} optional - zero or more
+(...) grouping
+- exception
+; terminates a production rule.
+````
+
+Given the following EBNF grammars, identify the one that best defines
+a grammar for accepting 'yz' words.
+  
+A yz word is defined as a word that:
+   - has at least two letters,
+   - either starts with a 'y' and ends with a 'z', or start's with a 'z' and
+     ends with a 'y',
+   - once the first and last letters are removed, the remaining word is 
+     either the empty string (''), or another yz word.
+
+a)
+````
+alph = 'z' | 'y'
+zy = [ ('z', alph, 'y') | ('y', alph, 'z') ]
+````
+
+b)
+````
+zy = [ ('z', zy, 'y') | ('y', zy, 'z') ]
+````
+
+c)
+````
+zy = ('y', [zy], 'z') | ('z', [zy], 'y')
+````
+
+d)
+````
+alph = 'z' | 'y';
+seq = { 'alph' };
+pal = seq, seq;
+````
+
+*This is the end of the exam.   What follows are instructions for the practice
+questions.*
 
 ---
 

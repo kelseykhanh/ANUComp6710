@@ -17,28 +17,20 @@ build:
     paths:
       - src/comp1110/exam/*.class
 
-P2:
-  tags:
-    - comp1110
-  stage: test
-  script:
-    - python3 /checkmc.py p-2.csv 4 abcde
-  allow_failure: true
-
-Q6:
-  tags:
-    - comp1110
-  stage: test
-  script:
-    - python3 /checkmc.py q-6.csv 4 abcde
-  allow_failure: true
-
 P1:
   tags:
     - comp1110
   stage: test
   script:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.P1HelloWorldTest
+  allow_failure: true
+
+P2:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - python3 /checkmc.py p-2.csv 4 abcde
   allow_failure: true
 
 Q1.1Ceil:
@@ -73,6 +65,14 @@ Q1.1Furthest:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1FurthestTest
   allow_failure: true
 
+Q1.1Remainder:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1RemainderTest
+  allow_failure: true
+
 Q1.2Magic:
   tags:
     - comp1110
@@ -97,6 +97,14 @@ Q1.2TwoThree:
       - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1TwoThreeTest
     allow_failure: true
 
+Q1.2VowCon:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1VowConTest
+  allow_failure: true
+
 Q1.3Number:
   tags:
     - comp1110
@@ -111,6 +119,14 @@ Q1.3Word:
   stage: test
   script:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1WordTest
+  allow_failure: true
+
+Q1.3Bishop:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1BishopTest
   allow_failure: true
 
 Q2Caps:
@@ -129,7 +145,15 @@ Q2Checksum:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q2ChecksumTest
   allow_failure: true
 
-Q3.1:
+Q2Redact:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q2RedactTest
+  allow_failure: true
+
+Q3.1Hollywood:
   tags:
     - comp1110
   stage: test
@@ -137,7 +161,7 @@ Q3.1:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q3HollywoodTest
   allow_failure: true
 
-Q3.2:
+Q3.2Hollywood:
   tags:
     - comp1110
   stage: test
@@ -157,12 +181,48 @@ Q3.2:
     - if [ $bad -eq 4 ]; then echo; echo "Unit test passed good program and rejected 4 bad programs."; echo "5/5 marks"; fi
   allow_failure: true
 
-Q4:
+Q3.1Library:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q3LibraryTest
+  allow_failure: true
+
+Q3.2Library:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - good=1; bad=0;
+    - java -cp /exam/G:$CP org.junit.runner.JUnitCore comp1110.exam.Q3GetMaxCoauthorsTest || good=0
+    - java -cp /exam/B0:$CP org.junit.runner.JUnitCore comp1110.exam.Q3GetMaxCoauthorsTest || b0=$?
+    - if [ $b0 -eq 1 ]; then bad=$((bad+1)); fi;
+    - java -cp /exam/B1:$CP org.junit.runner.JUnitCore comp1110.exam.Q3GetMaxCoauthorsTest || b1=$?
+    - if [ $b1 -eq 1 ]; then bad=$((bad+1)); fi;
+    - java -cp /exam/B2:$CP org.junit.runner.JUnitCore comp1110.exam.Q3GetMaxCoauthorsTest || b2=$?
+    - if [ $b2 -eq 1 ]; then bad=$((bad+1)); fi;
+    - java -cp /exam/B3:$CP org.junit.runner.JUnitCore comp1110.exam.Q3GetMaxCoauthorsTest || b3=$?
+    - if [ $b3 -eq 1 ]; then bad=$((bad+1)); fi;
+    - if [ $good -eq 0 ]; then echo; echo "Unit test rejected good program."; echo "0/5 marks"; false; fi
+    - if [ $bad -ne 4 ]; then m=$(($bad+1)); echo; echo "Unit test passed good program but only rejected $bad/4 bad programs."; echo "$m/5 marks"; false; fi
+    - if [ $bad -eq 4 ]; then echo; echo "Unit test passed good program and rejected 4 bad programs."; echo "5/5 marks"; fi
+  allow_failure: true
+
+Q4FerrisWheel:
   tags:
     - comp1110
   stage: test
   script:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q4FerrisWheelTest
+  allow_failure: true
+
+Q4SushiTrain:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q4SushiTrainTest
   allow_failure: true
 
 Q5Address:
@@ -179,4 +239,20 @@ Q5Car:
   stage: test
   script:
     - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q5CarTest
+  allow_failure: true
+
+Q5Actor:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q5ActorTest
+  allow_failure: true
+
+Q6:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - python3 /checkmc.py q-6.csv 4 abcde
   allow_failure: true
