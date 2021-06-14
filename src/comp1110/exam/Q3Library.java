@@ -11,7 +11,7 @@ import java.util.Set;
  *    an ISBN (a unique identifier),
  *    a year of first publication,
  *    a list of authors
- *    a title
+ *    a title (also unique)
  *    a rating (0.0 - 5.0)
  *
  */
@@ -24,7 +24,7 @@ public class Q3Library {
      * @param isbn The ISBN of the book (which uniquely identifies it)
      * @param year     the year that the book was first published
      * @param authors the authors of the book
-     * @param title the title of the book
+     * @param title the title of the book (also unique)
      * @param rating the average reader rating for this book (0.0 - 5.0)
      * @return true if the book was added to the library, or false if the
      * book was not added (because there is already a book with that isbn)
