@@ -31,10 +31,10 @@ public class Q2Checksum {
    * the checksum would 78 % 26 = 0, so the checksum character would be 'a',
    * and the output file would contain two bytes: 'a' followed by 'N'.
    *
-   * If the input file contained two bytes which had the values 78 and 104
-   * ('Nh'), then the checksum would be (78 + 104) % 26 = 25, so the checksum
+   * If the input file contained two bytes which had the values 78 and 103
+   * ('Ng'), then the checksum would be (78 + 103) % 26 = 25, so the checksum
    * character would be 'z', and the output file would contain three bytes: 'z'
-   * followed by 'Nh'.
+   * followed by 'Ng'.
    *
    *
    * @param input The name of the input file
