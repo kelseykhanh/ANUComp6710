@@ -22,6 +22,22 @@ public class Q1Furthest {
      */
     public static int findFurthest(int[] in, int target) {
         // FIXME complete this method
-        return Integer.MAX_VALUE;
+
+        if (in == null || in.length == 0){
+            return target;
+        }
+
+        int furthestValue = in[0];
+        int furthestDifference = Math.abs(in[0] - target);
+
+        for (int value : in){
+            int currentDifference = Math.abs(target - value);
+            if (currentDifference > furthestDifference || (currentDifference == furthestDifference && value > furthestValue)){
+                furthestValue = value;
+                furthestDifference = currentDifference;
+            }
+        }
+        return furthestValue;
+
     }
 }
