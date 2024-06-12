@@ -19,6 +19,23 @@ public class Q1Floor {
      * or floor-1 if there is no such value
      */
     public static int findGreater(int[] in, int floor) {
-        return 0; // FIXME complete this method
+
+        int smallestValue = Integer.MAX_VALUE;
+        boolean found  = false;
+
+        for (int value : in){
+            if (value > floor){
+                found = true;
+                if (value < smallestValue){
+                    smallestValue = value;
+
+                }
+            }
+        }
+        if (!found){
+            return floor-1;
+        }
+        return smallestValue;
+
     }
 }
