@@ -3,6 +3,14 @@ package comp1110.exam;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * COMP1110 Exam, Question 3.2
  */
@@ -50,7 +58,7 @@ public class Q3GetMaxCoauthorsTest {
             "Emma",
             "Persuasion",
     };
-    float[] ratings = new float[] {
+    float[] ratings = new float[]{
             3.73f,
             4.0f,
             3.38f,
@@ -62,4 +70,32 @@ public class Q3GetMaxCoauthorsTest {
     };
 
     // FIXME add one or more JUnit unit tests for the getMaxCoauthors() method of the Q3Library class
+
+    @Test
+    public void testSingleBookMultipleAuthors() {
+        Q3Library library = new Q3Library();
+        library.addBook(1, 2020, new HashSet<>(Arrays.asList("Author A", "Author B", "Author C")), "Single Book", 4.0f);
+        assertEquals(2, library.getMaxCoauthors());  // Author A has 2 unique co-authors: B, C
+    }
+
+    @Test
+    public void testSingleBookSingleAuthor() {
+        Q3Library library = new Q3Library();
+        library.addBook(1, 2020, new HashSet<>(Arrays.asList("Author A")), "Single Book", 4.0f);
+        assertEquals(0, library.getMaxCoauthors());  // Only one author, no co-authors
+    }
+
+    @Test
+    public void testMultipleBooksSameAuthors() {
+        Q3Library library = new Q3Library();
+        library.addBook(1, 2020, new HashSet<>(Arrays.asList("Author A", "Author B")), "Book 1", 4.0f);
+        library.addBook(2, 2021, new HashSet<>(Arrays.asList("Author A", "Author B")), "Book 2", 4.1f);
+        assertEquals(1, library.getMaxCoauthors());  // Author A has 1 unique co-author: B (B counted once)
+    }
+
+    @Test
+    public void testEmptyLibrary() {
+        Q3Library library = new Q3Library();
+        assertEquals(0, library.getMaxCoauthors());  // No books in the library
+    }
 }

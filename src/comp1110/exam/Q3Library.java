@@ -1,6 +1,6 @@
 package comp1110.exam;
 
-import java.util.Set;
+import java.util.*;
 
 /**
  * COMP1110 Exam, Question 3.1
@@ -20,19 +20,50 @@ public class Q3Library {
      * Add a new book to the library. If there exists a book with this ISBN,
      * do not modify this library.
      *
-     * @
-     * @param isbn The ISBN of the book (which uniquely identifies it)
-     * @param year     the year that the book was first published
+     * @param isbn    The ISBN of the book (which uniquely identifies it)
+     * @param year    the year that the book was first published
      * @param authors the authors of the book
-     * @param title the title of the book (also unique)
-     * @param rating the average reader rating for this book (0.0 - 5.0)
+     * @param title   the title of the book (also unique)
+     * @param rating  the average reader rating for this book (0.0 - 5.0)
+     * @
      * @return true if the book was added to the library, or false if the
      * book was not added (because there is already a book with that isbn)
      */
-    public boolean addBook(int isbn, int year, Set<String> authors,  String title, float rating) {
-        // FIXME complete this method
-        return false;
+
+    private static class Book {
+        int isbns;
+        int years;
+        Set<String> authors;
+        String titles;
+        float ratings;
+
+
+        public Book(int isbns, int years, Set<String> authors, String titles, float ratings) {
+            this.isbns = isbns;
+            this.years = years;
+            this.authors = new HashSet<>(authors);
+            this.titles = titles;
+            this.ratings = ratings;
+        }
     }
+
+
+
+
+    private Map<Integer, Book> library = new HashMap<>();
+
+
+
+    public boolean addBook(int isbns, int years, Set<String> authors,  String titles, float ratings) {
+        if (library.containsKey(isbns)) {
+            return false; // Book with this ISBN already exists
+        }
+
+        Book newBook = new Book(isbns, years, authors, titles, ratings);
+        library.put(isbns, newBook);
+        return true;
+    }
+
 
 
     /**
